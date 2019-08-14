@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+@import './components/Landing/Landing.scss';
+@import './components/Hero/Hero.scss';
+@import './components/Heroes/Heroes.scss';
+@import './components/Pagination/Pagination.scss';
+@import './Layouts/Navigation/Navigation.scss';
+@import './components/Home/Home.scss';
+@import './components/SearchPage/SearchPage.scss';
+
+@font-face {
+    font-family: "marvel";
+    src: url('./assets/Marvel-Regular.ttf');
+}
+

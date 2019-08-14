@@ -1,0 +1,26 @@
+.navigation {
+  background: $blue;
+  display: flex;
+  & a {
+    display: flex;
+    justify-content: space-around;
+    color: $white;
+    font-size: 1.2rem;
+    padding-right: 20px;
+    transition: 0.3s ease-in-out;
+    align-self: center;
+    &:hover {
+      color: $red;
+      text-decoration: none;
+    }
+  }
+}
+
+.navbar-brand {
+  background: $red;
+  color: $white;
+  font-family: 'marvel';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px;
+}

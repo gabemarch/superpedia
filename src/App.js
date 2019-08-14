@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.scss";
+import Pagination from "./components/Pagination/Pagination";
+import Heroes from "./components/Heroes/Heroes";
+import axios from "./axios";
 
-function App() {
+const App = () => {
+  const [heroes, setHeroes] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [heroesPerPage] = useState(10);
+
+  useEffect(() => {
+    const fetchHeroes = async () => {
+      setLoading(true);
+      const res = await axios.get("all.json");
+      setHeroes(res.data);
+      setLoading(false);
+    };
+
+    fetchHeroes();
+  }, []);
+
+  const indexOfLastHero = currentPage * heroesPerPage;
+  const indexofFirstHero = indexOfLastHero - heroesPerPage;
+  const currentHeroes = heroes.slice(indexofFirstHero, indexOfLastHero);
+
+  // Change pages
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Heroes heroes={currentHeroes} loading={loading} />
+      <Pagination
+        heroesPerPage={heroesPerPage}
+        totalHeroes={heroes.length}
+        paginate={paginate}
+      />
     </div>
   );
-}
+};
 
 export default App;

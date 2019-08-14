@@ -1,0 +1,66 @@
+.homepage {
+  & h1 {
+    font-family: $heading-font;
+    @include heading-text;
+    text-align: center;
+    margin-top: 3rem;
+    color: $red;
+    letter-spacing: 7px;
+  }
+  & h2 {
+    font-family: $font-stack;
+    font-size: 1.2em;
+    color: $white;
+  }
+  &-cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & img {
+      height: 27rem;
+    }
+  }
+  & .card {
+    width: 20rem;
+    text-align: center;
+    margin: 2rem;
+    transition: .3s ease-in-out;
+    &:hover {
+        box-shadow: 0px 0px 20px $drop-shadow;
+    }
+    & button {
+      height: 40px;
+      outline: none;
+      border: none;
+      background: $red;
+      border-radius: 6px;
+      transition: .4s ease-in-out;
+      &:hover {
+          background: $blue;
+      }
+    }
+    &-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+  }
+}
+
+.homepage-cards::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  color: $white;
+  & span {
+    padding: 6px;
+  }
+}

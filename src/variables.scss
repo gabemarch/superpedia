@@ -1,0 +1,13 @@
+$base-color: #354654;
+$white: #fff;
+$red: #ef2323;
+$blue: #2972aa;
+$light-blue: #7bb1e0;
+$drop-shadow: #fff39e;
+$font-stack: Arial, Helvetica, sans-serif;
+$heading-font: "marvel";
+
+@mixin heading-text {
+  text-transform: uppercase;
+  font-size: 4.6em;
+}

@@ -1,0 +1,46 @@
+.search-results {
+  color: $white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+
+  &-list {
+    flex-grow: 1;
+    flex: 1 1 20%;
+    text-align: center;
+
+    &-items {
+        padding: 20px;
+    }
+    & h2 {
+      margin: 0 auto;
+    }
+    & p {
+      width: 70%;
+      margin: 0 auto;
+      padding: 12px;
+    }
+  }
+  &-img {
+    height: 300px;
+  }
+  &-link {
+    outline: none;
+    border: none;
+    color: $white;
+    background: $red;
+    border-radius: 6px;
+    padding: 6px;
+    transition: 0.4s ease-in-out;
+    width: 7.5rem;
+    display: block;
+    margin: 10px auto;
+    &:hover {
+      text-decoration: none;
+      background: $light-blue;
+      color: $white;
+    }
+  }
+}

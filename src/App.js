@@ -13,7 +13,7 @@ const App = () => {
   useEffect(() => {
     const fetchHeroes = async () => {
       setLoading(true);
-      const res = await axios.get("all.json");
+      const res = await axios.get(".json");
       setHeroes(res.data);
       setLoading(false);
     };

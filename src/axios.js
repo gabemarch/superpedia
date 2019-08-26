@@ -1,5 +1,5 @@
 import axios from "axios"
 
 export default axios.create({
-  baseURL: `https://akabab.github.io/superhero-api/api/`
+  baseURL: `https://superheroespedia.firebaseio.com/heroes`
 });

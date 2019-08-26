@@ -8,8 +8,8 @@ const Heroes = ({ heroes, loading }) => {
     return (
       <div className="heroes">
         {heroes.map(hero => (
-          <div className="heroes-card card">
-            <Link key={hero.id} to={`/heroes/${hero.id}`}>
+          <div className="heroes-card card" key={hero.id}>
+            <Link to={`/heroes/${hero.id}`}>
               <ul className="heroes-list">
                 <li className="heroes-list-items">{hero.name}</li>
               </ul>

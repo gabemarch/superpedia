@@ -1,8 +1,47 @@
-.hero-page {
-    display: flex;
-    background: $light-blue;
+h1 {
+  @include heading-text;
+  font-family: "marvel";
+  letter-spacing: 3px;
+  color: $red;
+  text-align: center;
+}
+
+.go-back-link {
+  display: block;
+   width: 6rem;
+  color: $white;
+  margin-left: 20px;
+  margin-top: -70px;
+  background: $red;
+  border-radius: 4px;
+  transition: .3s ease-in-out;
+  & span {
+    width: auto;
+    padding: 5px;
+  }
+  &:hover {
+    text-decoration: none;
     color: $white;
-    text-transform: capitalize;
+    background: $light-blue;
+  }
+}
+
+.hero-page {
+  display: flex;
+  color: $white;
+  padding: 0;
+  margin: 200px auto;
+  text-transform: capitalize;
+  &-biography {
+    padding: 3rem;
+    & h2 {
+      color: $light-blue;
+    }
+  }
+  & img {
+    width: 24rem;
+    margin-left: 15rem;
+  }
 }
 
 .loader {
